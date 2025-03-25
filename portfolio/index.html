@@ -10,6 +10,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded&display=swap" />
     </head>
     <body>
@@ -26,26 +27,26 @@
                     <li>
                         
                         <a href="index.html">
-                            <span class="material-symbols-rounded icon-inicio" class="material-symbols-rounded">home</span>
+                            <span class="material-symbols-rounded icon-inicio">home</span>
                             Inicio
                         </a>
                     </li>
                     <li>
                         
                         <a href="about.html">
-                            <span class="material-symbols-rounded icon-about" class="material-symbols-rounded">person</span>
+                            <span class="material-symbols-rounded icon-about">person</span>
                             Sobre Mí
                         </a>
                     </li>
                     <li>
                         <a href="projects.html">
-                            <span class="material-symbols-rounded icon-proyectos" class="material-symbols-rounded">code</span>
+                            <span class="material-symbols-rounded icon-proyectos">code</span>
                             Proyectos
                         </a>
                     </li>
                     <li>
                         <a href="contact.html">
-                            <span class="material-symbols-rounded icon-contacto" class="material-symbols-rounded">mail</span>
+                            <span class="material-symbols-rounded icon-contacto">mail</span>
                             Contacto
                         </a>
                     </li>
@@ -54,13 +55,18 @@
         </header>
         <main>
             <article>
-                <section>
-                    <h2>Hola, soy Charlie. ¡Bienvenido a mi Portfolio!</h2>
-                    <p>
-                        Me encanta mezclar código, diseño y un poquito de magia para crear experiencias digitales innovadoras, optimizando cada detalle.
-                    </p>
-                    <img src="img/foto-charlie-emily.png" alt="Charlie Emily" />
-                    <img src="img/gif-computadora.gif" alt="Computadora" />
+                <section class="bienvenida">
+                    <div class="imagenes">
+                        <img src="img/foto-charlie-emily.png" alt="Foto Charlie" class="circulo foto" />
+                        <img src="img/gif-computadora.gif" alt="GIF computadora" class="circulo gif" />
+                    </div>
+                    <div class="texto-bienvenida">
+                        <h2><span class="saludo">Hola, soy <span class="nombre">Charlie</span></span></h2>
+                        <h2><span class="portfolio">¡Bienvenido a mi Portfolio!</span></h2>
+                        <p>
+                        Me encanta mezclar <span class="resaltado">código</span>, <span class="resaltado">diseño</span> y un poquito de <span class="resaltado">magia</span> para crear experiencias digitales innovadoras, optimizando cada detalle.
+                        </p>
+                    </div>
                 </section>
                 <section>
                     <h2>Título Profesional</h2>
