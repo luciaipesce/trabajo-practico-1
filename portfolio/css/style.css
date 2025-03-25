@@ -1,0 +1,229 @@
+/*Reseteo General*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*-------------------------*/
+
+/*Tuneo de la Barra de Scroll porque queda lindo(?*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #f080b8;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #ffeaf4;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #ffeba1;
+    padding: 20px 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease-in-out;
+}
+/*------------------------------------*/
+
+/*Estilo del h1*/
+.titulo {
+    display: flex;
+    font-family: 'Pacifico', cursive;
+    font-weight: 200;
+    font-size: 50px;
+    color: #f080b8;
+}
+/*------------------------------------*/
+
+/*Animación del h1*/
+.titulo span {
+    opacity: 0;
+    display: inline-block;
+    transform: translateY(20px) rotate(20deg); 
+    animation: aparecer 0.5s ease-out forwards;
+}
+
+.titulo span:nth-child(8) {
+    width: 20px;
+}
+
+.titulo span:nth-child(1) { animation-delay: 0s; }
+.titulo span:nth-child(2) { animation-delay: 0.1s; }
+.titulo span:nth-child(3) { animation-delay: 0.2s; }
+.titulo span:nth-child(4) { animation-delay: 0.3s; }
+.titulo span:nth-child(5) { animation-delay: 0.4s; }
+.titulo span:nth-child(6) { animation-delay: 0.5s; }
+.titulo span:nth-child(7) { animation-delay: 0.6s; }
+.titulo span:nth-child(8) { animation-delay: 0.7s; }
+.titulo span:nth-child(9) { animation-delay: 0.8s; }
+.titulo span:nth-child(10) { animation-delay: 0.9s; }
+.titulo span:nth-child(11) { animation-delay: 1s; }
+.titulo span:nth-child(12) { animation-delay: 1.1s; }
+.titulo span:nth-child(13) { animation-delay: 1.2s; }
+
+@keyframes aparecer {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/*-------------------------------------------------------*/
+
+/*Estilo del nav*/
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffeba1;
+    padding: 20px 40px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+    position: relative;
+    text-decoration: none;
+    font-family: 'Outfit', sans-serif;
+    font-size: 26px;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.material-symbols-rounded {
+    font-family: 'Material Symbols Rounded';
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+    font-size: 28px;
+    vertical-align: middle;
+    margin-right: 3 px;
+}
+
+.icon-inicio {
+    color: #ff8d8d;   /* celeste pastel */
+}
+
+.icon-about {
+    color: #7bb0e1;   /* verde agua pastel */
+}
+
+.icon-proyectos {
+    color: #7bd58a;   /* rosa claro */
+}
+
+.icon-contacto {
+    color: #b094f2;   /* rosa chicle pastel */
+}
+/*---------------------------------------*/
+
+/*Animación del nav*/
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background-color: #f080b8;
+    transition: width 0.3s ease-in-out;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a:hover .material-symbols-rounded {
+    color: #f080b8;
+}
+/*---------------------------------------*/
+
+/*Estilo del footer*/
+footer {
+    background-color: #ffeba1;
+    color: #333;
+    display: flex;
+    justify-content:space-around;
+    align-items: flex-start;
+    padding: 30px 1px;
+    flex-wrap: wrap;
+    gap: 30px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+}
+
+footer section h3 {
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: #f080b8;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+footer li img {
+    width: 50px;
+    height: 50px;
+}
+
+
+footer section p {
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    margin-top: 5px;
+}
+
+footer section:nth-child(2) ul {
+    display: flex;
+    gap: 20px;
+}
+
+footer section:last-child {
+    width: 100%;
+    text-align: center;
+    margin-top: 0px;
+}
+/*---------------------------------------*/
+
+/* Animación del Footer*/
+footer a img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+footer a:hover img {
+    transform: scale(1.1);
+    filter: brightness(1.2) hue-rotate(10deg);
+}
+/*------------------------------------------------------*/
