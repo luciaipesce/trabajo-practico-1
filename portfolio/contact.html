@@ -15,13 +15,15 @@
     </head>
     <body>
         <header>
-            <h1 class="titulo">
-                <!-- Para el que corrija esto: lo hice así para hacer la animación como si se estuviera escribiendo letra por letra, 
-                me costó un montón, capaz hay formas más clean y mejores prácticas para hacerlo, pero así me funcionó, y como dice la regla fundamental de la programación: "Si funciona no lo toques" -->
-                <span>C</span><span>h</span><span>a</span><span>r</span><span>l</span><span>i</span><span>e</span>
-                <span> </span>
-                <span>E</span><span>m</span><span>i</span><span>l</span><span>y</span>
-            </h1>
+            <a href="index.html">
+                <h1 class="titulo">
+                    <!-- Para el que corrija esto: lo hice así para hacer la animación como si se estuviera escribiendo letra por letra, 
+                    me costó un montón, capaz hay formas más clean y mejores prácticas para hacerlo, pero así me funcionó, y como dice la regla fundamental de la programación: "Si funciona no lo toques" -->
+                    <span>C</span><span>h</span><span>a</span><span>r</span><span>l</span><span>i</span><span>e</span>
+                    <span> </span>
+                    <span>E</span><span>m</span><span>i</span><span>l</span><span>y</span>
+                </h1>
+            </a>
             <nav>
                 <ul>
                     <li>
@@ -54,13 +56,15 @@
             </nav>
         </header>
         <main>
-            <section>
-                <div>
+            <section class="contacto">
+                <div class="formulario-container">
                     <h2>Contacto</h2>
-                    <form>
-                        <input type="text" placeholder="Nombre" required>
-                        <input type="email" placeholder="Email" required>
-                        <textarea placeholder="Escriba su mensaje aquí..." required></textarea>
+                    <form action="https://hook.us2.make.com/ma6xbw7h2esslr2dmqclozjh21ksxjf5" method="POST">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="contact.html">
+                        <input type="text" name="nombre" placeholder="Nombre" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <textarea name="mensaje" rows="5" placeholder="Escriba su mensaje aquí..." required></textarea>
                         <button type="submit">ENVIAR</button>
                     </form>
                 </div>
