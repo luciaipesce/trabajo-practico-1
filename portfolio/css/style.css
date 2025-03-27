@@ -1,3 +1,5 @@
+/*Me gusta explicar cositas asi que acá va mi súper CSS full comentado (obviamente no todo lo que está en el código lo sabía, lo tuve que aprender, asi que por eso comento las cosas raras que aprendí, también para ayudarte a vos que me lo estás corrigiendo :) )*/
+
 /* Reseteo General */
 * { /* <---- (*) significa que le aplicamos esta regla a todos los elementos HTML */
     margin: 0;
@@ -11,7 +13,7 @@
     width: 10px; /* <---- Ancho de la barra */
 }
 
-::-webkit-scrollbar-thumb { /* El thumb es la parte de la barra de scroll que se mueve, o sea, el "botoncito" que agarrás y deslizás para bajar o subir la página. */
+::-webkit-scrollbar-thumb { /* El thumb es la parte de la barra de scroll que se mueve, o sea, el "cosito" que agarrás y deslizás para bajar o subir la página. */
     background-color: #f080b8; /* <---- Color del scroll que se mueve */
     border-radius: 10px; /* <---- Bordes redondeados */
 }
@@ -35,7 +37,7 @@ header { /* <---- Es el coso amarillo de arriba */
     display: flex;  /* <---- Organiza el contenido en fila con flexbox */
     justify-content: space-between;
     align-items: center;
-    position: sticky; /* <---- Hace que el header quede fijo arriba cuando scrolleás sin usar position: fixed (épico) */
+    position: sticky; /* <---- Hace que el header quede fijo arriba cuando scrolleás sin usar position: fixed (épica implementación, posta me re jode las páginas que tenés que volver a subir hasta arriba para moverte entre paginitas) */
     top: 0;
     z-index: 1000; /* <---- Se asegura de que el header quede por encima de todo lo demás, para que no se superponga con otros elementos */
     background-color: #ffeba1;
@@ -176,7 +178,7 @@ nav a:hover .material-symbols-rounded { /* <---- También cambia de color el ico
 /*---------------------------------------*/
 
 /*Estilo del main*/
-main img {
+main img { /* <---- Estilo de las imágenes dentro del main */
     max-width: 100%;
     height: auto;
     display: block;
@@ -187,152 +189,154 @@ main img {
 /*---------------------------------------*/
 
 /*Estilo y Animación de la Sección de Bienvenida del index (Inicio)*/
-.imagenes {
+.imagenes { /* <---- Contenedor principal de las imágenes circulares superpuestas */
     position: relative;
     width: 120%;
     max-width: 1000px;
     height: auto; 
-    aspect-ratio: 3 / 1;
+    aspect-ratio: 3 / 1; /* <---- Relación de aspecto más ancha que alta (panorámica) */
 }
 
-.circulo {
+.circulo { /* <---- Estilo general para las imágenes en forma de círculo :v*/
     border-radius: 50%;
     width: 65%;  
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    position: absolute;
-    transition: transform 0.4s ease;
+    aspect-ratio: 1 / 1; /* <---- Mantiene proporción 1:1 para formar un círculo perfecto */
+    object-fit: cover; /* <---- Ajusta la imagen para cubrir el contenedor sin deformarse */
+    position: absolute; /* <---- Posiciona las imágenes libremente dentro del contenedor */
+    transition: transform 0.4s ease; /* <---- Suaviza la animación al hacer hover */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-.foto {
+.foto { /* <---- Imagen de Charlie*/
     top: -133%;
     left: -2%;
-    z-index: 2;
+    z-index: 2; /* <---- Hace que esta imagen se muestre por encima de la otra */
 }
 
-.gif {
+.gif { /* <---- Gif de la computadora codificando*/
     bottom: -85%;
     right: -15%;
-    z-index: 1;
+    z-index: 1; /* <---- Coloca esta imagen por debajo, para que se vea atrás de la foto de Charlie */
 }
 
-.circulo:hover { /* <---- Animación */
-    transform: scale(1.1);
-    will-change: transform;
+.circulo:hover { /* <---- Animación al pasar el mouse por una imagen circular */
+    transform: scale(1.1); /* <---- Agranda ligeramente la imagen */
+    will-change: transform; /* <---- Indica al navegador que este valor cambiará para mejorar el rendimiento (? */
 }
 
-.bienvenida {
+.bienvenida { /* <---- Sección principal de bienvenida del index */
     width: 100%;
     height: auto;
     padding: 150px 40px 80px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background: linear-gradient(to right, #ffffff 30%, #ffffff 30%, #6edec7 30%, #6edec7 100%);
-    box-sizing: border-box;
+    background: linear-gradient(to right, #ffffff 30%, #ffffff 30%, #6edec7 30%, #6edec7 100%); /* <---- Fondo dividido: blanco a la izquierda y verde agua a la derecha */
+    box-sizing: border-box; /* <---- Incluye padding y border dentro del tamaño total del elemento */
 }
 
-.texto-bienvenida {
+.texto-bienvenida { /* <---- Contenedor del texto de bienvenida */
     padding-left: 110px;
     line-height: 1;
 }
 
-.saludo {
-    display: inline-block;
+.saludo { /* <---- Es el texto "Hola, soy Charlie"*/
+    display: inline-block; /* <---- Permite aplicar transformaciones sin afectar a otros elementos */
     font-size: 28px;
     font-family: 'Pacifico', cursive;
     color: #fff6c7;
-    transform: rotate(-3deg); 
+    transform: rotate(-3deg); /* <---- Gira ligeramente el texto*/
     margin-bottom: 25px;
 }
 
-.texto-bienvenida .nombre {
+.saludo .nombre { /* <---- Agarro el texto "Hola, soy Charlie" y le pongo al nombre "Charlie" otro color */
     color: #8562a2;
 }
 
-.titulo-bienvenida {
+.titulo-bienvenida { /* <---- Es el texto "¡Bienvenido a mi Portfolio!" */
     font-size: 48px;
     font-family: 'Pacifico', cursive;
     color: #f36ca0;
-    display: block;
+    display: block; /* <---- Ocupa todo el ancho disponible */
     line-height: 1;
-    margin-bottom: 20px
+    margin-bottom: 20px 
 }
 
-.texto-bienvenida p {
+.texto-bienvenida p { /* <---- Párrafo descriptivo de bienvenida */
     font-family: 'Concert One', cursive;
     font-size: 45px;
     line-height: 1.3;
     color: #333;
 }
 
-.resaltado {
+.resaltado { /* <---- Palabritas destacadas en el párrafo */
     font-weight: 600;
     color: transparent;
-    -webkit-text-stroke: 1px #f36ca0;
+    -webkit-text-stroke: 1px #f36ca0; /* <---- Otra vez el raro del -webkit, permite que sea compatible con Google Chrome, text-stroke lo que hace es aplicar un contorno rosa al texto. */
 }
 /*-------------------------------------------------------------*/
 
 /*Estilo de la Sección de Bienvenida del about (Sobre Mí)*/
-.bienvenida-sobremi {
+.bienvenida-sobremi { /* <---- Estilo general del contenedor de bienvenida de la sección "Sobre Mí" */
     width: 100%;
     height: auto;
     padding: 140px 40px 110px;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row-reverse; /* <---- Invierte el orden de los elementos: la imagen va a la derecha y el texto a la izquierda */
     justify-content: space-around;
     align-items: center;
-    background: linear-gradient(to left, #ffffff 20%, #ffffff 20%, #AF8DD7 20%, #AF8DD7 100%);
+    background: linear-gradient(to left, #ffffff 20%, #ffffff 20%, #AF8DD7 20%, #AF8DD7 100%); /* <---- Fondo degradado que va de blanco a lila desde la derecha hacia la izquierda */
     box-sizing: border-box;
 }
 
-.bienvenida-sobremi .texto-bienvenida {
+.bienvenida-sobremi .texto-bienvenida { /* <---- Ajustes de espaciado y alineación para el bloque de texto */
     padding-left: 20px;
     padding-right: 0;
     text-align: left; 
 }
 
-.bienvenida-sobremi .gif {
+.bienvenida-sobremi .gif { /* <---- Estilos específicos para el gif dentro de la sección */
     width: 98%; 
     bottom: -105%;
     right: -2%;
-    z-index: 1;
+    z-index: 1; /* <---- Asegura que el gif quede por detrás si hay elementos superpuestos */
 }
 
-.bienvenida-sobremi .resaltado {
-    -webkit-text-stroke: 1px #6edec7;
+.bienvenida-sobremi .resaltado { /* <---- Aplica el contorno al texto resaltado en esta sección */
+    -webkit-text-stroke: 1px #6edec7; /* <---- Contorno verde-agua alrededor del texto resaltado */
 }
 
-.bienvenida-sobremi .titulo-bienvenida {
+.bienvenida-sobremi .titulo-bienvenida { /* <---- Estilos para el título principal de esta sección */
     font-size: 70px;
     color: #fff6c7;
 }
 /*-------------------------------------------------------------*/
 
-/* Estilo 1 para el Título Profesional del index (Inicio) y para las Experiencias Laborales del about (Sobre Mí)*/
-.estilo-1 {
+/*ACLARACIÓN: Lo que hice (no sé si te diste cuenta -_-) fué usar un estilo para la frase inicial de bienvenida tanto para el index como para el about, y acá creé dos estilos que llamé Estilo 1 y Estilo 2 (muy original de mi parte). El estilo 1 es el que tiene un formato X ------ Y y este último texto lo resalta y cambia el cursor a un resaltador cuando hoveas (eso quedó GOD), y el otro es el que muestra los distintos ítems en tarjetitas, entonces toda mi página está basada con esas 3 cositas, el estilo de bienvenida y los otros dos estilos. Bueno, a continuación programé los dos estilos esos*/
+
+/* Estilo 1 para el Título Profesional del index (Inicio) y para las Experiencias Laborales del about (Sobre Mí) */
+.estilo-1 { /* <---- Contenedor principal con fondo pastel y espaciado general */
     background-color: #fff6c7;
     padding: 50px 60px 20px 60px; 
-    position: relative; 
-    z-index: 0;         
+    position: relative; /* <---- Necesario para posicionamientos absolutos como el del subrayado */
+    z-index: 1;  /* <---- Asegura que quede detrás de elementos con mayor z-index */       
 }
 
-.bloque-encabezado {
+.bloque-encabezado { /* <---- Contenedor del título y subtítulo */
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
+    flex-wrap: wrap; /* <---- Permite que los elementos bajen si no entran en una sola fila para resposivearlo */
+    gap: 20px; /* <---- Espaciado entre título, línea y subtítulo */
     margin-bottom: 50px;
 }
 
-.titulo-estilo-1 {
+.titulo-estilo-1 { /* <---- Título principal rosa*/
     font-size: 50px;
     color: #f080b8;
     font-weight: 700;
 }
 
-.subtitulo-cursiva {
+.subtitulo-cursiva { /* <---- Texto "Ingeniería en Desarrollo de Software" */
     font-family: 'Pacifico', cursive;
     font-size: 32px;
     padding-left: 30px;
@@ -340,61 +344,61 @@ main img {
     color: #8562a2;
 }
 
-.linea-estilo-1 {
+.linea-estilo-1 { /* <---- Línea gris horizontal decorativa */
     height: 3px;
     width: 180px;
     background-color: #515151;
-    display:inline-flex;
+    display:inline-flex; /* <---- Se comporta como un elemento en línea, no ocupa toda la línea, y a su vez permite usar flexbox */
     margin-right: 15px;
     margin-left: 20px;
     margin-bottom: 7px;
 }
 
-.bloque-contenido {
+.bloque-contenido { /* <---- Contenedor de cada bloque con contenido textual */
     margin-bottom: 40px;
 }
 
-.encabezado-articulo {
+.encabezado-articulo { /* <---- Encabezado que contiene el texto completo de cada articulito digamos */
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 15px; /* <---- Espaciado entre los elementos */
     margin-bottom: 10px;
 }
 
-.etiqueta-cursiva {
+.etiqueta-cursiva { /* <---- Texto en gris que está a la izquierda */
     font-family: 'Pacifico', cursive;
     font-size: 22px;
     color: #666;
 }
 
-.universidad-hover {
+.universidad-hover { /* <---- Texto verde agua que está a la derecha */
     font-size: 28px;
     font-weight: bold;
     color: #6edec7;
-    position: relative;
-    transition: all 0.3s ease-in-out;
+    position: relative; /* <---- Necesario para posicionar el efecto ::after */
+    transition: all 0.3s ease-in-out; /* <---- Transición suave para el efecto hover */
     padding-bottom: 5px;
     line-height: 1.2;
-    cursor: url("../img/cursor-resaltador.png"), pointer;
+    cursor: url("../img/cursor-resaltador.png"), pointer; /* <---- Cambia el cursor por un resaltador (re GOD) */
 }
 
-.universidad-hover::after {
-    content: '';
+.universidad-hover::after { /* <---- Efecto de resaltado al pasar el mouse */
+    content: ''; /* <---- Elemento vacío necesario para el efecto de subrayado */
     position: absolute;
-    width: 0%;
+    width: 0%; /* <---- Inicialmente invisible */
     height: 10px;
     bottom: 0;
     left: 0;
     background-color: hsla(331, 95%, 78%, 0.4);
-    z-index: -1;
-    transition: width 0.3s ease-in-out;
+    z-index: -1; /* <---- Lo pone detrás del texto */
+    transition: width 0.3s ease-in-out; /* <---- Hace que el subrayado se deslice */
 }
 
-.universidad-hover:hover::after {
+.universidad-hover:hover::after { /* <---- Al pasar el mouse, la línea de subrayado se expande */
     width: 100%;
 }
 
-.bloque-contenido p {
+.bloque-contenido p { /* <---- Texto de cada párrafo */
     font-size: 18px;
     color: #333;
     max-width: auto;
@@ -403,22 +407,22 @@ main img {
 }
 /*-------------------------------------------------------------*/
 
-/* Estilo 2 para las Áreas de Especialización del index (Inicio), las Habilidades y Herramientas del about (Sobre Mí) y para los Proyectos Realizados de projects (Proyectos)*/
-.estilo-2 {
+/* Estilo 2 para las Áreas de Especialización del index (Inicio), las Habilidades y Herramientas del about (Sobre Mí) y para los Proyectos Realizados de projects (Proyectos) */
+.estilo-2 { /* <---- Contenedor general con fondo lila */
     background-color: #B894DD;
     padding: 50px 30px;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* <---- Organiza los hijos en columna */
     gap: 40px;
 }
 
-.estilo-2 h2 {
+.estilo-2 h2 { /* <---- Título principal de la sección */
     color: #fff6c7;
     font-size: 50px;
     margin-bottom: -10px;
 }
 
-.estilo-2 h3 {
+.estilo-2 h3 { /* <---- Título de cada subsección */
     font-family: Pacifico, cursive;
     color: #f080b8;
     font-size: 42px;
@@ -426,18 +430,18 @@ main img {
     margin-bottom: 10px;
 }
 
-.estilo-2 article,
+.estilo-2 article, /* <---- Tarjeta contenedora del contenido (valga la redundancia) */
 .estilo-2 section {
     background-color: #fff;
     border-radius: 18px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     padding: 30px;
-    position: relative;
-    border: 1.5px solid #333;
-    transition: transform 0.3s ease-in-out;
+    position: relative; /* <---- Necesario para posicionar los adornos con ::before y ::after */
+    border: 1.5px solid #333; /* <---- Para darle el bordecito negro a la tarjetita */
+    transition: transform 0.3s ease-in-out; /* <---- Suaviza el efecto de escala en hover */
 }
 
-.estilo-2 article::before,
+.estilo-2 article::before, /* <---- Tres circulitos decorativos tipo ventana Mac (? */
 .estilo-2 section::before {
     content: "";
     position: absolute;
@@ -453,7 +457,7 @@ main img {
         40px 0 #1dd1a1;
 }
 
-.estilo-2 article::after,
+.estilo-2 article::after, /* <---- Línea horizontal decorativa dentro de cada tarjeta */
 .estilo-2 section::after {
     content: "";
     position: absolute;
@@ -464,43 +468,42 @@ main img {
     background-color: #333;
 }
 
-.estilo-2 p {
+.estilo-2 p { /* <---- Texto descriptivo dentro de las tarjetas */
     color: #333;
     font-size: 20px;
     line-height: 1.6;
     margin-top: 10px;
 }
 
-.estilo-2 article:hover,
+.estilo-2 article:hover, /* <---- Efecto de agrandado al pasar el mouse */
 .estilo-2 section:hover {
     transform: scale(1.02);
     transition: transform 0.3s ease-in-out;
-    z-index: 1;
 }
 /*-------------------------------------------------------------*/
 
-/* Estilo 2 sobreescrito para las Habilidades y Herramientas del about (Sobre Mí)*/
-.grid-habilidades {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+/* Estilo 2 sobreescrito para las Habilidades y Herramientas del about (Sobre Mí) */
+.grid-habilidades { /* <---- Contenedor en cuadrícula para las tarjetas de habilidades */
+    display: grid; /* <---- Usa sistema de grid */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* <---- Tarjetas adaptables según pantalla */
+    gap: 30px; /* <---- Separación entre tarjetas */
     margin-top: 30px;
 }
 
-.grid-habilidades article {
+.grid-habilidades article { /* <---- Cada tarjeta de habilidad */
     padding: 20px;
     border-radius: 16px;
     border: 1.5px solid #333;
     background-color: white;
-    position: relative;
+    position: relative; /* <---- Para posicionar los circulitos decorativos */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; /* <---- Suaviza el efecto hover */
 }
 
-.grid-habilidades article::before {
-    content: "";
+.grid-habilidades article::before { /* <---- Circulitos tipo Mac para cada tarjeta */
+    content: ""; /* <---- Elemento vacío para decoración */
     position: absolute;
-    top: 20px;
+    top: 25px;
     left: 20px;
     width: 12px;
     height: 12px;
@@ -509,28 +512,28 @@ main img {
     box-shadow: 20px 0 #feca57, 40px 0 #1dd1a1;
 }
 
-.grid-habilidades article:hover {
-    transform: scale(1.03);
+.grid-habilidades article:hover { /* <---- Efecto de agrandado al pasar el mouse */
+    transform: scale(1.03); /* <---- Aumenta un poquito la tarjeta */
 }
 
-.grid-habilidades h4 {
-    font-size: 1.6rem;
+.grid-habilidades h4 { /* <---- Título de cada habilidad */
+    font-size: 1.6rem; /* <---- Se usa rem para que el tamaño del texto sea relativo al tamaño base del documento y no fijo, o sea, responsiveo */
     margin-top: 35px;
     margin-bottom: 10px;
     color: #f47bbd;
     font-family: 'Pacifico', cursive;
 }
 
-.seccion-habilidades {
+.seccion-habilidades { /* <---- Fondo y padding general para la sección Habilidades */
     background-color: #6edec7;
     padding: 60px 40px;
 }
 
-.seccion-habilidades h2 {
+.seccion-habilidades h2 { /* <---- Título principal "Habilidades y Herramientas" */
     color: #f36ca0;
 }
 
-.seccion-habilidades h3 {
+.seccion-habilidades h3 { /* <---- Título de subtarjetas */
     color: #af8dd7;
 }
 /*-------------------------------------------------------------*/
@@ -597,6 +600,7 @@ form textarea { /* <---- Estilos de los Inputs y del Textarea */
     margin-bottom: 20px;
     border: none;
     border-bottom: 2px solid #ccc;
+    font-family: 'Outfit', sans-serif;
     font-size: 16px;
     background: transparent;
     outline: none; /* <---- Es para sacar el contorno que aparece automáticamente cuando hacés clic en un input (el borde azul en muchos navegadores) */
@@ -620,7 +624,7 @@ form button { /* <---- Botón Enviar */
     padding: 15px 30px;
     font-size: 16px;
     border-radius: 8px;
-    cursor: url("../img/cursor-pizza.png"), pointer; /* <---- Cambia el cursor al de una pizza cuando pasás el mouse por encima del botón (épico) y el pointer por las dudas que la pizza no se cargue */
+    cursor: url("../img/cursor-pizza.png"), pointer; /* <---- Cambia el cursor al de una Pipsha cuando pasás el mouse por encima del botón (épico) y el pointer por las dudas que la pizza no se cargue */
     letter-spacing: 2px;
     transition: background-color 0.3s ease;
 }
@@ -692,5 +696,44 @@ footer a img {
 footer a:hover img {
     transform: scale(1.1); /* <---- Agranda el ícono al hacer hover */
     filter: brightness(1.2) hue-rotate(10deg); /* <---- Le da un toque de brillo y cambia sutilmente el color */
+}
+/*------------------------------------------------------*/
+
+/* Clase para que el botón del Dark Mode quede arriba de todo, porque me queda abajo de algunos elementos si no */
+.darkmode-toggle {
+    z-index: 9999 !important;  /* <---- Esto lo fuerza arriba de todo */
+    position: fixed !important; /* <---- Asegura que quede fijo */
+}
+/*------------------------------------------------------*/
+
+/* ????????????????????? */
+.sorpresita {
+    cursor: url("../img/cursor-pizza.png"), pointer; 
+}
+
+.sorpresita:hover {
+    cursor: url("../img/cursor-pizza.png"), pointer; 
+}
+
+#sorpresita-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 9999;
+    display: none;
+}
+
+.video-sorpresita {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 9999;
+    display: none;
 }
 /*------------------------------------------------------*/
